@@ -38,7 +38,7 @@ def adresseaendern(req):
     zip2 = parameters.get("zip-code")
     
         
-    sub = substr(zip2,2)   
+    sub = zip2[:2]  
     
     return {
         "speech": "test",
