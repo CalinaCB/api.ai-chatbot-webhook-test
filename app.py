@@ -27,13 +27,17 @@ def webhook():
     r.headers['Content-Type'] = 'application/json'
     return r
 
-def makeWebhookResult(req):
-    #if req.get("result").get("action") != "shipping.cost":
+def adresseaendern(req):
+     return {
+        "speech": "test",
+        "displayText": "test",
+        #"data": {},
+        # "contextOut": [],
+        "source": "shippingcosttest123"
+
+    }
     
-    res = req.get("result");
-    
-    if res.get("action") != "shipping.cost":
-        return {}
+def shippingcost(req):  
     result = req.get("result")
     parameters = result.get("parameters")
     zone = parameters.get("shipping-zone")
@@ -53,6 +57,18 @@ def makeWebhookResult(req):
         "source": "shippingcosttest123"
 
     }
+
+def makeWebhookResult(req):
+    #if req.get("result").get("action") != "shipping.cost":
+    
+    res = req.get("result");
+    
+    if strcmp(res.get("action"),"shipping.cost"):
+        return shippingcost(req)
+              
+    if strcmp(res.get("action"),"adresse.aendern"):
+        return adresseaendern(req)
+    
 
 if __name__ == '__main__':
     port = int(os.getenv('PORT', 5000))
