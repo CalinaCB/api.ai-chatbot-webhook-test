@@ -40,7 +40,7 @@ def adresseaendern(req):
         
     # sub = substr(zip,2)   
     
-     return {
+    return {
         "speech": "test",
         "displayText": "test",
         #"data": {},
