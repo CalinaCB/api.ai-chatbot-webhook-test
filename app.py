@@ -71,7 +71,7 @@ def shippingcost(req):
     }
 
 def makeWebhookResult(req):
-    #if req.get("result").get("action") != "shipping.cost":
+    # if req.get("result").get("action") != "shipping.cost":
     
     res = req.get("result");
     
