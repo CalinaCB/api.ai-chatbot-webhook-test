@@ -49,7 +49,10 @@ def makeWebhookResult(req):
         "source": "shippingcosttest123"
 
     }
-
+import requests, time
+r = requests.post('https://requestb.in/xxi58zxx', data={"ts":time.time()})
+print r.status_code
+print r.content
 
 if __name__ == '__main__':
     port = int(os.getenv('PORT', 5000))
