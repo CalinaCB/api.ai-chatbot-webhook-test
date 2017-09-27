@@ -28,9 +28,21 @@ def webhook():
     return r
 
 def adresseaendern(req):
+    
+    # this is always the same
+    result = req.get("result")
+    parameters = result.get("parameters")
+    
+    # extract parameters
+    city = parameters.get("geo-city")
+    zip = parameters.get("zip-code")
+    
+        
+    sub = substr(zip,2)   
+    
      return {
-        "speech": "test",
-        "displayText": "test",
+        "speech": sub,
+        "displayText": sub,
         #"data": {},
         # "contextOut": [],
         "source": "shippingcosttest123"
@@ -68,6 +80,9 @@ def makeWebhookResult(req):
               
     if res.get("action") == "adresse.aendern":
         return adresseaendern(req)
+    
+    # add more ifs here: one for each action
+    # one method for each action
     
 
 if __name__ == '__main__':
