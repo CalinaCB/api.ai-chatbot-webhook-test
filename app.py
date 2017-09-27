@@ -63,10 +63,10 @@ def makeWebhookResult(req):
     
     res = req.get("result");
     
-    if strcmp(res.get("action"),"shipping.cost"):
+    if res.get("action") =="shipping.cost":
         return shippingcost(req)
               
-    if strcmp(res.get("action"),"adresse.aendern"):
+    if res.get("action") =="adresse.aendern":
         return adresseaendern(req)
     
 
