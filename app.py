@@ -34,15 +34,15 @@ def adresseaendern(req):
     parameters = result.get("parameters")
     
     # extract parameters
-    #city = parameters.get("geo-city")
-    #zip = parameters.get("zip-code")
+    city = parameters.get("geo-city")
+    zip2 = parameters.get("zip-code")
     
         
-    # sub = substr(zip,2)   
+    sub = substr(zip2,2)   
     
     return {
         "speech": "test",
-        "displayText": "test",
+        "displayText": sub,
         #"data": {},
         # "contextOut": [],
         "source": "shippingcosttest123"
