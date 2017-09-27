@@ -43,16 +43,16 @@ def adresseaendern(req):
     if sub == "38" : 
         if city != "Braunschweig" : 
             return {
-                "speech": "Die Postleitzahl passt nicht zum Ort, wir geben uns Mühe!",
-                "displayText": "Die Postleitzahl passt nicht zum Ort, wir geben uns Mühe!",
+                "speech": "Die Postleitzahl passt nicht zum Ort, wir geben uns trotzdem Mühe!",
+                "displayText": "Die Postleitzahl passt nicht zum Ort, wir geben uns trotzdem Mühe!",
                 #"data": {},
                 # "contextOut": [],
                 "source": "shippingcosttest123"
     }
     
     return {
-        "speech": "test",
-        "displayText": sub,
+        "speech": "Wunderbar! Wir ändern Ihre Adresse.",
+        "displayText": "Wunderbar! Wir ändern Ihre Adresse.",
         #"data": {},
         # "contextOut": [],
         "source": "shippingcosttest123"
