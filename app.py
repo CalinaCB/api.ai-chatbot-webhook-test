@@ -40,6 +40,16 @@ def adresseaendern(req):
         
     sub = zip2[:2]  
     
+    if sub == "38" : 
+        if city != "Braunschweig" : 
+            return {
+                "speech": "Die Postleitzahl passt nicht zum Ort, wir geben uns Mühe!",
+                "displayText": "Die Postleitzahl passt nicht zum Ort, wir geben uns Mühe!",
+                #"data": {},
+                # "contextOut": [],
+                "source": "shippingcosttest123"
+    }
+    
     return {
         "speech": "test",
         "displayText": sub,
